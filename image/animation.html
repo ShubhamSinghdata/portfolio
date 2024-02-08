@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: ;
+        }
+        body{display: flex;
+            font-size: 50px;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+            background-color: violet;
+
+        }.wraper{
+            display: flex;
+        }
+        .wraper .static-txt{
+
+         color: aqua;
+         font-size: 60px;
+         font-weight: 400;
+            /* border: 1px solid red; */
+/* 
+            border-right: .15rem solid orange;
+            width:0;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 6s steps(20,end) infinite forwards;
+            animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+        .dynamic-txt li{
+            list-style: none;
+            color: red;
+            font-size: 60px;
+            font-weight: 500;
+            position: relative;
+            animation: slide 12s  steps(4) infinite
+
+
+        }
+        @keyframes slide{
+            100%{
+               top: -360px 
+            }
+
+        }
+        .dynamic-txt li{
+            position: relative;
+        }
+        .wraper .dynamic-txt {
+            margin-left: 60px;
+            line-height: 90px;
+            height: 90px;
+            /* background-color: blue; */
+
+            /* overflow: hidden; */
+        }
+        .dynamic-txt li::after{
+            content: "";
+            position: absolute;
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            /* background-color: red; */
+            border-left: 2px solid red;
+            animation: typing 3s steps(10,end) infinite;
+        }
+        /* @keyframes typing{
+            0%{
+                width:0;
+            }
+            50%{
+                width: 100%;
+            }
+        } */ */
+        @keyframes typing {
+            40%,
+            60%{
+            left: calc(100%+30px);
+        } 100%{
+            left:0;
+        }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="static-txt">this is </div>
+    <ul class="dynamic-txt">
+        <li><span>data</span></li>
+        <li><span>bata</span></li>
+        <li><span>dfvea</span></li>
+        <li><span>daegra</span></li>
+    </ul>
+       
+    </div>
+</body>
+</html>
